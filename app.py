@@ -10,52 +10,76 @@ model = joblib.load("rocket_altitude_model.pkl")
 st.set_page_config(page_title="Rocket Altitude Predictor", layout="centered")
 # Custom Rocket Theme CSS
 st.markdown("""
-    <style>
-    /* Background gradient */
-    .stApp {
-        background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
-        color: white;
-        font-family: 'Segoe UI', sans-serif;
-    }
+<style>
+/* Background gradient */
+.stApp {
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #312e81);
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+}
 
-    /* Title styling */
-    .title {
-        text-align: center;
-        color: #ffffff;
-        font-size: 40px;
-        font-weight: 700;
-        padding: 20px 0px;
-    }
+/* Global text improvement */
+html, body, [class*="css"] {
+    color: #ffffff !important;
+    font-weight: 600 !important;
+}
 
-    /* Section headers */
-    h2, h3, h4 {
-        color: #93c5fd !important;
-    }
+/* Radio buttons */
+.stRadio > label, .stRadio > div, .stRadio > div > label {
+    color: #ffffff !important;
+    font-weight: 800 !important;
+    font-size: 18px !important;
+}
 
-    /* Input box styling */
-    .stNumberInput > div > div input {
-        background-color: #111827;
-        color: white;
-        border-radius: 8px;
-        border: 1px solid #1e40af;
-    }
+/* Input labels */
+label {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
 
-    /* Buttons */
-    div.stButton > button:first-child {
-        background-color: #1e40af;
-        color: white;
-        border-radius: 8px;
-        padding: 10px 20px;
-        font-size: 16px;
-        border: 2px solid #3b82f6;
-    }
+/* Selectbox styling */
+.stSelectbox label {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
 
-    div.stButton > button:hover {
-        background-color: #2563eb;
-        border-color: #60a5fa;
-    }
-    </style>
+/* Number input label */
+.stNumberInput label {
+    color: #ffffff !important;
+    font-weight: 700 !important;
+}
+
+/* Input box text */
+input, textarea {
+    color: white !important;
+    font-weight: 600 !important;
+}
+
+/* Title styling */
+.title {
+    text-align: center;
+    color: #ffffff;
+    font-size: 40px;
+    font-weight: 800;
+    padding: 20px 0px;
+}
+
+/* Buttons */
+div.stButton > button:first-child {
+    background-color: #1e40af;
+    color: white;
+    border-radius: 8px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: 2px solid #3b82f6;
+}
+div.stButton > button:hover {
+    background-color: #2563eb;
+    border-color: #60a5fa;
+}
+</style>
 """, unsafe_allow_html=True)
+
 
 st.markdown('<div class="title">🚀 Rocket Altitude Prediction App</div>', unsafe_allow_html=True)
 
