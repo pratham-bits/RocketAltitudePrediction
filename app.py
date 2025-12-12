@@ -37,22 +37,44 @@ label {
     font-weight: 700 !important;
 }
 
-/* Selectbox styling */
-.stSelectbox label {
+/* Number input box text */
+.stNumberInput input {
     color: #ffffff !important;
     font-weight: 700 !important;
+    background-color: #1e293b !important;
+    border: 1px solid #3b82f6 !important;
+    border-radius: 6px !important;
 }
 
-/* Number input label */
-.stNumberInput label {
-    color: #ffffff !important;
-    font-weight: 700 !important;
-}
-
-/* Input box text */
-input, textarea {
+/* Text input */
+input[type="text"] {
     color: white !important;
-    font-weight: 600 !important;
+}
+
+/* Number input (fallback) */
+input[type="number"] {
+    color: white !important;
+}
+
+/* Selectbox text */
+div[data-baseweb="select"] > div {
+    background-color: #1e293b !important;
+    color: white !important;
+    font-weight: 700 !important;
+    border-radius: 6px !important;
+}
+
+div[data-baseweb="select"] span {
+    color: #ffffff !important;
+}
+
+/* Fix dropdown menu */
+ul[role="listbox"] li {
+    color: #000 !important;
+    background-color: #e2e8f0 !important;
+}
+ul[role="listbox"] li:hover {
+    background-color: #cbd5e1 !important;
 }
 
 /* Title styling */
@@ -79,6 +101,7 @@ div.stButton > button:hover {
 }
 </style>
 """, unsafe_allow_html=True)
+
 
 
 st.markdown('<div class="title">🚀 Rocket Altitude Prediction App</div>', unsafe_allow_html=True)
